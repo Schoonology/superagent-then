@@ -1,0 +1,17 @@
+{
+  "name": "superagent-then",
+  "version": "1.0.0",
+  "description": "A trivial plugin for Superagent that gives Requests a Promises/A+ .then().",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "Michael Schoonmaker <michael.r.schoonmaker@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "when": "~3.4.6"
+  },
+  "devDependencies": {
+    "superagent": "git://github.com/Schoonology/superagent"
+  }
+}
