@@ -6,7 +6,8 @@ function plugin(request) {
       request
         .on('error', reject)
         .end(resolve);
-    });
+    })
+      .then(onFulfilled, onRejected);
   };
 }
 
