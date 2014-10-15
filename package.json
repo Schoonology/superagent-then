@@ -1,6 +1,6 @@
 {
   "name": "superagent-then",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A trivial plugin for Superagent that gives Requests a Promises/A+ .then().",
   "main": "index.js",
   "scripts": {
