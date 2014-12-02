@@ -2,11 +2,13 @@ var superagent = require('superagent');
 var when = require('when');
 
 function plugin(request) {
-  request.end = function end() {
-    return when.promise(function (resolve, reject) {
-      request.on('error', reject);
-      superagent.Request.prototype.end.call(request, resolve);
-    });
+  var promise = when.promise(function (resolve, reject) {
+    request.on('response', resolve);
+    request.on('error', reject);
+  });
+
+  request.then = function then(onFulfilled, onRejected) {
+    return promise.then(onFulfilled, onRejected);
   };
 }
 
