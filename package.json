@@ -9,7 +9,7 @@
   "author": "Michael Schoonmaker <michael.r.schoonmaker@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "superagent": "~0.20.0"
+    "superagent": ">=0.20.0"
   },
   "dependencies": {
     "when": "~3.4.6"
