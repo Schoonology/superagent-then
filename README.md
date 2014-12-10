@@ -13,13 +13,14 @@ superagent
   ...
 ```
 
-This _replaces_ `.end` with a Promise-returning version. At this point, `.end`
-_no longer accepts a callback_.
+This makes Superagent "thenable" by adding a `.then` method that follows
+the Promises/A+ specification.
 
 ```
 superagent
   .get('www.google.com')
   .use(plugin)
+  .end()
   .then(function (response) {
     console.log('GET www.google.com:');
     console.log(response.status);
