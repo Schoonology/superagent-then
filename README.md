@@ -20,6 +20,7 @@ _no longer accepts a callback_.
 superagent
   .get('www.google.com')
   .use(plugin)
+  .end()
   .then(function (response) {
     console.log('GET www.google.com:');
     console.log(response.status);
